@@ -1,0 +1,54 @@
+/* body {
+    background-color: #E9ECEF;
+} */
+
+.phone {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.error {
+    font-weight: bold;
+    font-size: 16px;
+    color: red;
+}
+
+@media (max-width: 768px) {
+
+    .container .pc {
+        display: none;
+    }
+
+
+    .container .phone {
+
+        display: inline;
+    }
+
+
+
+    
+    .phone {
+
+        display: inline;
+    }
+    .pc {
+        display: none;
+    }
+
+}
+
+
+.fixed-alert {
+    position: absolute; /* veya fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Diğer elemanların üstünde olsun */
+  }
+  input, select, textarea {
+  font-size: 16px;
+}

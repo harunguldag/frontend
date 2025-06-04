@@ -1,0 +1,145 @@
+:root {
+    --clr: #fff;
+}
+
+.navigation body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--clr);
+
+}
+
+.navigation {
+    /* 70*5 + 30  */
+    width: 450px; 
+    
+    height: 70px;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    zoom: 0.8;
+    /* Dışarı doğru border */
+    outline: 10px solid #ffffff;
+    /* Border genişliği ve rengi */
+    /* outline-offset: 6px; */
+    /* Border ile div arasındaki boşluk */
+
+}
+
+.navigation ul {
+    position: relative;
+    display: flex;
+    width: 350px; /* 70*4  */
+
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #ffffff00;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    font-size: 1.5em;
+    color: #fff;
+    line-height: 75px;
+    opacity: 0.85;
+    transition: 0.5s;
+}
+
+.navigation ul li.activee a .icon {
+    opacity: 1;
+    color: #209cff;
+    transform: translateY(-8px);
+}
+
+.indicator {
+    position: absolute;
+    top: -10px;
+    width: 70px;
+    height: 70px;
+    background: var(--clr);
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border: 6px solid var(--clr);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.indicator {
+    position: absolute;
+    top: -10px;
+    width: 70px;
+    height: 70px;
+    background: var(--clr);
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border: 6px solid var(--clr);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.indicator::before,
+.indicator::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+}
+
+.indicator::before {
+    left: -25.75px;
+    border-top-right-radius: 20px;
+    box-shadow: 4px -6px 0 2px var(--clr);
+}
+
+.indicator::after {
+    right: -25.75px;
+    border-top-left-radius: 20px;
+    box-shadow: -4px -6px 0 2px var(--clr);
+}
+
+.indicator span {
+    position: absolute;
+    left: -1px;
+    width: 60px;
+    height: 60px;
+    border: 4px solid #209bff00;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transform: scale(0.85);
+}
+
+@media (max-width: 480px) {
+    .navigation {
+        zoom: 0.8;
+    }
+}
+
+@media (max-width: 330px) {
+    .navigation {
+        zoom: 0.7;
+    }
+}
+
+

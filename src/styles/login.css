@@ -1,0 +1,42 @@
+.login {
+
+    .full-height-login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 102%;
+        margin: -1vh;
+    }
+}
+
+.login::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: blur(32px);
+    z-index: -1;
+    /* Arka plana gönder */
+}
+
+
+.phone {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .login .pc {
+        display: none;
+    }
+
+
+    .login .phone {
+
+        display: inline;
+    }
+
+}
